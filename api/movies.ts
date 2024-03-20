@@ -5,9 +5,9 @@ const headers = {
 }
 
 
-export const TopRatedMovies = async () => {
+export const TopRatedMovies = async (page:number) => {
   const url =
-    "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1";
+    `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=${page}`;
   const options = {
     method: "GET",
     headers,
@@ -36,3 +36,6 @@ export const fetchMovie = async (id: number) => {
   }
 
 };
+
+
+
